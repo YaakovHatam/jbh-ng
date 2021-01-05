@@ -1,5 +1,7 @@
-<h2>רבי מכר</h2>
-<img src='/assets/Metro_Transit.png'>
-<ng-container *ngFor='let book of books'>
-    <app-book [book]="book" *ngIf='book.qunatity > 0'></app-book>
-</ng-container>
+<div class="container">
+    <h2>רבי מכר</h2>
+    <img src='/assets/Metro_Transit.png'>
+    <ng-container *ngFor='let book of books'>
+        <app-book [book]="book" *ngIf='book.qunatity > 0'></app-book>
+    </ng-container>
+</div>
