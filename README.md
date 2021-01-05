@@ -1,6 +1,7 @@
 # MyApp
+check if angular installed: `ng --version`
 
-npm install -g @angular/cli
+if not install, instal it globally running the command `npm install -g @angular/cli`
 
 ng new my-app
 
