@@ -1,0 +1,11 @@
+<div class="container">
+    <h3> Items in cart: {{ itemsInCart.length }} </h3>
+    <div *ngFor='let item of itemsInCart' class='row'>
+        <div class='col-2'>
+            <img class='img-fluid' [src]="getBook(item).cover">
+        </div>
+        <div class='col-3'>
+            {{ getBook(item).title}}
+        </div>
+    </div>
+</div>

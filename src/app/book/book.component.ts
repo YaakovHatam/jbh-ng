@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { BookModel } from '../models/book.model';
 
 @Component({
@@ -9,16 +9,18 @@ import { BookModel } from '../models/book.model';
 export class BookComponent implements OnInit {
 
     @Input() book: BookModel;
+    @Input() showImage: boolean;
+    @Output() addToCartEvent: EventEmitter<string> = new EventEmitter<string>();
 
     constructor() {
-        console.log(this.book.author);
+
     }
 
     ngOnInit(): void {
     }
 
-    onUserClick(): void {
-
+    addToCart(): void {
+        this.addToCartEvent.emit(this.book.isbn);
     }
 
 }

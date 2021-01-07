@@ -1,9 +1,13 @@
 <h1>{{book.title}}</h1>
-<div>
+<div *ngIf='showImage'>
     <img [src]='book.cover' width=100>
 </div>
+<p>
+    Publish date: {{ book.publishDate | date:"dd/MM/yyyy"}}
+</p>
 <span>{{book.author}}</span> - <strong>{{book.price}}</strong>
 <p>
-    {{book.desc }}
+    {{book.desc | descLimit:70 }}
 </p>
+<button (click)='addToCart()' class='btn btn-success'>Add to cart</button>
 <hr>
