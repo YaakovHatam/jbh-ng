@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { DescLimitPipe } from './pipes/desc-limit.pipe';
 import { CartComponent } from './components/cart/cart.component';
+import { CurrencyPipe } from './pipes/currency.pipe';
 
 @NgModule({
     declarations: [
         AppComponent,
         BookComponent,
         DescLimitPipe,
-        CartComponent
+        CartComponent,
+        CurrencyPipe
     ],
     imports: [
         BrowserModule

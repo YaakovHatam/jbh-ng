@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BookModel } from './models/book.model';
 
 @Component({
@@ -8,6 +8,11 @@ import { BookModel } from './models/book.model';
 })
 export class AppComponent {
     itemsInCart: string[];
+    onSaleBooks: string[] = [
+        '1',
+        '3'
+    ];
+
     books: BookModel[] = [{
         isbn: '1',
         title: 'יהדות הלכה למעשה',
@@ -33,7 +38,7 @@ export class AppComponent {
         author: 'הרב מנשה כהן',
         publishDate: new Date(2017, 0, 25),
         price: 89,
-        qunatity: 0,
+        qunatity: 1,
         desc: "הספר 'לקט השבת' מכיל שאלות ותשובות בענייני שבת עם ציוני מקורות, הערות והארות, מפי ראשונים ואחרונים, ופסקי הלכות ע''פ מרן השו''ע ונושאי כליו ושו''ת מאחרוני זמננו.",
         cover: 'http://www.sefer.org.il/UploadImages/000687/7755829.jpg'
     },
@@ -43,7 +48,7 @@ export class AppComponent {
         author: 'הרב מנשה כהן',
         publishDate: new Date(2017, 2, 15),
         price: 89,
-        qunatity: 0,
+        qunatity: 2,
         desc: 'לקט השבת\' מכיל שאלות ותשובות בענייני שבת עם ציוני מקורות, הערות והארות, מפי ראשונים ואחרונים, ופסקי הלכות ע\'\'פ מרן השו\'\'ע ונושאי כליו ושו\'\'ת מאחרוני זמננו.',
         cover: 'http://www.sefer.org.il/UploadImages/000687/7755829.jpg'
     }];

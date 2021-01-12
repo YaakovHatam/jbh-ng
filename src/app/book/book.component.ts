@@ -10,6 +10,8 @@ export class BookComponent implements OnInit {
 
     @Input() book: BookModel;
     @Input() showImage: boolean;
+    @Input() onSale: boolean;
+
     @Output() addToCartEvent: EventEmitter<string> = new EventEmitter<string>();
 
     constructor() {
