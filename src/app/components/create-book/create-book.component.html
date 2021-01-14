@@ -1,0 +1,67 @@
+https://miro.medium.com/max/12032/0*UIiWfg8cXRGdGVJ0
+<h2>Create using ngModel</h2>
+<section class='row'>
+    <div class='col-3'>
+        <label>מחבר: <input [(ngModel)]="book.author"></label>
+    </div>
+    <div class='col-3'>
+        <label>עטיפה: <input [(ngModel)]='book.cover'></label>
+    </div>
+    <div class='col-3'>
+        <label>תיאור: <input [(ngModel)]="book.desc"></label>
+    </div>
+    <div class='col-3'>
+        <label>מספר isbn: <input [(ngModel)]="book.isbn"></label>
+    </div>
+    <div class='col-3'>
+        <label>מחיר: <input [(ngModel)]="book.price"></label>
+    </div>
+    <div class='col-3'>
+        <label>תאריך הפצה: <input type='date' [(ngModel)]="book.publishDate"></label>
+    </div>
+    <div class='col-3'>
+        <label>כמות: <input [(ngModel)]="book.quantity"></label>
+    </div>
+    <div class='col-3'>
+        <label>כותרת: <input [(ngModel)]="book.title"></label>
+    </div>
+    <button class='btn btn-success col-3' (click)="createBook()">Create book</button>
+</section>
+
+<h2>Create using tempate reference</h2>
+<section class='row'>
+    <div class='col-3'>
+        <label>מחבר: <input #author></label>
+    </div>
+    <div class='col-3'>
+        <label>עטיפה: <input #cover value='https://miro.medium.com/max/12032/0*UIiWfg8cXRGdGVJ0'></label>
+    </div>
+    <div class='col-3'>
+        <label>תיאור: <input #desc></label>
+    </div>
+    <div class='col-3'>
+        <label>מספר isbn: <input #isbn></label>
+    </div>
+    <div class='col-3'>
+        <label>מחיר: <input #price></label>
+    </div>
+    <div class='col-3'>
+        <label>תאריך הפצה: <input type='date' #publishDate></label>
+    </div>
+    <div class='col-3'>
+        <label>כמות: <input #quantity></label>
+    </div>
+    <div class='col-3'>
+        <label>כותרת: <input #title></label>
+    </div>
+    <button class='btn btn-success col-3' (click)="createBook({
+        author: author.value,
+        cover: cover.value,
+        desc: desc.value,
+        isbn: isbn.value,
+        publishDate: publishDate.value,
+        price: price.value,
+        quantity: quantity.value,
+        title: title.value
+    })">Create book</button>
+</section>

@@ -15,6 +15,9 @@ export class DescLimitPipe implements PipeTransform {
         if (idx === 0) {
             currentCharsCount--;
         }
+        if (idx === arr.length) {
+            return idx - 1;
+        }
 
         currentCharsCount += arr[idx].length + seperatorLength;
 

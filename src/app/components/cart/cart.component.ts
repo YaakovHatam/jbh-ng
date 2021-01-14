@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BookModel } from 'src/app/models/book.model';
+import { BookService } from 'src/app/services/book.service';
 
 @Component({
     selector: 'app-cart',
@@ -8,12 +9,13 @@ import { BookModel } from 'src/app/models/book.model';
 })
 export class CartComponent implements OnInit {
     @Input() itemsInCart: string[];
-    @Input() books: BookModel[];
+    books: BookModel[];
 
-    constructor() {
+    constructor(private bookService: BookService) {
     }
 
     ngOnInit(): void {
+        this.books = this.bookService.books;
     }
 
     getBook(isbn: string): BookModel {
