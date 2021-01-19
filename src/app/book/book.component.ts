@@ -24,5 +24,4 @@ export class BookComponent implements OnInit {
     addToCart(): void {
         this.addToCartEvent.emit(this.book.isbn);
     }
-
 }

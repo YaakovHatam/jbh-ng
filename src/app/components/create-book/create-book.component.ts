@@ -27,6 +27,7 @@ export class CreateBookComponent implements OnInit {
     }
 
     createBook(book?: BookModel): void {
+        console.log(book || this.book);
         if (!book) {
             this.bookService.books.push({ ...this.book });
         } else {

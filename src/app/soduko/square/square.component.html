@@ -1,0 +1,10 @@
+<div class='row' *ngFor='let row of board; let rowIndexer = index'>
+    <div class='col text-center border' *ngFor='let col of row; let colIndexer = index'>
+        <ng-container *ngIf='col %2 == 0; else inputTemplate'>
+            {{ col }}
+        </ng-container>
+        <ng-template #inputTemplate>
+            <input min='1' max='9' #val (change)="setUserChoice(rowIndexer, colIndexer, val.value)" type="number">
+        </ng-template>
+    </div>
+</div>

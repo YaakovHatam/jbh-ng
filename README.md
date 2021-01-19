@@ -8,7 +8,10 @@ ls03 - `nothing happend`
 
 ls04 - `Moudle (overview)`, `service (sync)`, `ngmodel`, `Template variables (#)`
 
+ls05 - `Routing`
+
 `RxJS`, `Forms`
+
 
 ## How to run
 check if angular installed: `ng --version`

@@ -1,0 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+.game-item {
+    border: 1px solid black;
+    float: left;
+    min-height: 100px;
+}

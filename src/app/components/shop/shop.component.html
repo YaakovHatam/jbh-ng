@@ -1,0 +1,14 @@
+<div class='container'>
+    <app-create-book></app-create-book>
+</div>
+<app-cart [itemsInCart]="itemsInCart"></app-cart>
+<hr>
+<div class="container">
+    <h2>רבי מכר</h2>
+    <img src='/assets/Metro_Transit.png'>
+    <ng-container *ngFor='let book of books'>
+        <app-book [onSale]='onSaleBooks.indexOf(book.isbn) != -1' (addToCartEvent)="addToCart($event)" [book]="book"
+            [showImage]="false" *ngIf='book.quantity > 0'>
+        </app-book>
+    </ng-container>
+</div>
