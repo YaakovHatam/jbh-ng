@@ -1,0 +1,5 @@
+<h2>Check weather</h2>
+<label>City: <input #cityname></label> <button (click)='check(cityname)'>Check weather</button>
+<div>
+    <span *ngIf='temp'>The temperatue is {{ temp }}</span>
+</div>
