@@ -1,8 +1,11 @@
-<header>
-    <div [routerLink]='["/"]'>Home</div>
-    <ng-container *ngFor='let i of [3,4,5]'>
-        <div [routerLink]='["/soduko", i]'>Soduko {{ i }}</div>
-    </ng-container>
-    <div [routerLink]='["/shop"]'>Book shop</div>
+<header class='container'>
+    <nav class='row'>
+        <div class='col' [routerLink]='["/"]'>Home</div>
+        <ng-container *ngFor='let i of [3,4,5]'>
+            <div class='col' [routerLink]='["/soduko", i]'>Soduko {{ i }}</div>
+        </ng-container>
+        <div class='col' [routerLink]='["/shop"]'>Book shop</div>
+        <div class='col' [routerLink]='["/move"]'>Move game</div>
+    </nav>
 </header>
 <router-outlet></router-outlet>

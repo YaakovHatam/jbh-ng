@@ -13,11 +13,13 @@ import { BoardComponent } from './soduko/board/board.component';
 import { SquareComponent } from './soduko/square/square.component';
 import { HomeComponent } from './components/home/home.component';
 import { ShopComponent } from './components/shop/shop.component';
+import { MoveComponent } from './components/move/move.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'soduko/:size', component: BoardComponent },
-    { path: 'shop', component: ShopComponent }
+    { path: 'shop', component: ShopComponent },
+    { path: 'move', component: MoveComponent },
 ];
 
 @NgModule({
@@ -31,7 +33,8 @@ const routes: Routes = [
         BoardComponent,
         SquareComponent,
         HomeComponent,
-        ShopComponent
+        ShopComponent,
+        MoveComponent
     ],
     imports: [
         BrowserModule,
