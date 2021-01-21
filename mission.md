@@ -7,7 +7,7 @@
 6. In the main component (`app.component`) add a search feature
 
 ## Resources
-- (https://api.github.com/users/yaakovhatam)[https://api.github.com/users/yaakovhatam]
+- [https://api.github.com/users/yaakovhatam](https://api.github.com/users/yaakovhatam)
 
 
 
