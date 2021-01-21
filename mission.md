@@ -6,6 +6,8 @@
 5. Create a service to get a user by name
 6. In the main component (`app.component`) add a search feature
 
+## Resources
+- (https://api.github.com/users/yaakovhatam)[https://api.github.com/users/yaakovhatam]
 
 
 
@@ -44,4 +46,5 @@
   "following": 7,
   "created_at": "2014-03-18T11:04:24Z",
   "updated_at": "2021-01-21T09:50:39Z"
-}```
+}
+```

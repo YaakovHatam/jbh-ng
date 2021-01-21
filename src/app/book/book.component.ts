@@ -18,8 +18,13 @@ export class BookComponent implements OnInit, OnChanges {
 
     }
     ngOnChanges(changes: SimpleChanges): void {
-        console.log(changes.osSale);
+        console.log(changes.onSale.currentValue);
+
+        if (this.onSale !== changes.onSale.currentValue) {
+            this.onSale = changes.onSale.currentValue;
+        }
     }
+
 
     ngOnInit(): void {
     }
