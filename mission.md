@@ -1,7 +1,7 @@
 # GitHub cards
 1. Create a new Angular application
 2. Add bootstrap to the application
-3. Create a component style like Bootstrap card that get the user data via `@Input()`
+3. Create a component style like Bootstrap card that get the username (`string`) data via `@Input()`
 4. Create a model
 5. Create a service to get a user by name
 6. In the main component (`app.component`) add a search feature

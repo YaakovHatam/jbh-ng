@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { BookModel } from '../models/book.model';
 
 @Component({
@@ -6,7 +6,7 @@ import { BookModel } from '../models/book.model';
     templateUrl: './book.component.html',
     styleUrls: ['./book.component.css']
 })
-export class BookComponent implements OnInit {
+export class BookComponent implements OnInit, OnChanges {
 
     @Input() book: BookModel;
     @Input() showImage: boolean;
@@ -16,6 +16,9 @@ export class BookComponent implements OnInit {
 
     constructor() {
 
+    }
+    ngOnChanges(changes: SimpleChanges): void {
+        console.log(changes.osSale);
     }
 
     ngOnInit(): void {
