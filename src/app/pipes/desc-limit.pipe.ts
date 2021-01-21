@@ -6,8 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class DescLimitPipe implements PipeTransform {
 
     indexReturn(arr: string[],
-        idx: number, currentCharsCount: number,
-        charLimit: number, seperatorLength: number): number {
+                idx: number, currentCharsCount: number,
+                charLimit: number, seperatorLength: number): number {
 
         if (arr.length === 0) {
             throw new Error('empty array');

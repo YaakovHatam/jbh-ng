@@ -14,18 +14,22 @@ export class MoveComponent implements OnInit {
 
     @HostListener('document:keyup', ['$event'])
     onKeyUp(e: KeyboardEvent): void {
-        switch (e.keyCode) {
-            case 37:
+        switch (e.key) {
+            case 'Down': // IE/Edge specific value
+            case 'ArrowDown':
                 this.makeMove(0, -SHIFT_SIZE); // left arrow
                 break;
-            case 38:
+            case 'Up': // IE/Edge specific value
+            case 'ArrowUp':
                 this.makeMove(-SHIFT_SIZE, 0); // up arrow
                 break;
-            case 39:
-                this.makeMove(0, SHIFT_SIZE); // right arrow
-                break;
-            case 40:
+            case 'Left': // IE/Edge specific value
+            case 'ArrowLeft':
                 this.makeMove(SHIFT_SIZE, 0); // down arrow
+                break;
+            case 'Right': // IE/Edge specific value
+            case 'ArrowRight':
+                this.makeMove(0, SHIFT_SIZE); // right arrow
                 break;
             default:
                 break;
