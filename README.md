@@ -12,6 +12,8 @@ ls05 - `Routing`
 
 `RxJS`, `Forms`
 
+ls06 - https://github.com/YaakovHatam/jbh-animals
+
 
 ## How to run
 check if angular installed: `ng --version`
