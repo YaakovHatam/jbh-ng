@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherModel } from 'src/app/models/weather.model';
 import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
@@ -15,11 +16,8 @@ export class WeatherComponent implements OnInit {
     }
 
     check(inp: HTMLInputElement): void {
-
-
-        this.weatherService.get(inp.value).subscribe((weatherData: any) => {
+        this.weatherService.get(inp.value).subscribe((weatherData: WeatherModel) => {
             this.temp = weatherData.main.temp;
         });
     }
-
 }

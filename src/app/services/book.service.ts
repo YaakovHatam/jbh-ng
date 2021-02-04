@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BookModel } from '../models/book.model';
+import { CurrencyPipe } from '../pipes/currency.pipe';
 
 @Injectable({
     providedIn: 'root'
@@ -46,5 +47,8 @@ export class BookService {
         cover: 'http://www.sefer.org.il/UploadImages/000687/7755829.jpg'
     }];
 
-    constructor() { }
+    constructor() {
+
+    }
+
 }

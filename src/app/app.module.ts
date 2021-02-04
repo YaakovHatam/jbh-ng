@@ -16,6 +16,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { MoveComponent } from './components/move/move.component';
 import { WeatherComponent } from './components/weather/weather.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -38,13 +39,15 @@ const routes: Routes = [
         HomeComponent,
         ShopComponent,
         MoveComponent,
-        WeatherComponent
+        WeatherComponent,
+        TesttPipe
     ],
     imports: [
         BrowserModule,
         FormsModule,
         RouterModule.forRoot(routes),
-        HttpClientModule
+        HttpClientModule,
+        NgbModule
     ],
     providers: [],
     bootstrap: [AppComponent]

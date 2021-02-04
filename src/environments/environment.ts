@@ -4,7 +4,8 @@
 
 export const environment = {
     production: false,
-    currency: 'קרונה שוודית'
+    currency: 'קרונה שוודית',
+    chacheWeatherInSeconds: 22
 };
 
 /*
